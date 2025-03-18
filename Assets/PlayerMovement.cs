@@ -22,5 +22,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Move the player with physics-based movement
         rb.linearVelocity = movement.normalized * moveSpeed;
+
+        // Rotate the player to face the opposite direction of movement
+        if (rb.linearVelocity.sqrMagnitude > 0.1f) // Check if player is moving
+        {
+            float angle = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg; // Calculate angle in degrees
+            rb.rotation = angle + 180f; // Add 180 degrees to flip the rotation
+        }
     }
 }
