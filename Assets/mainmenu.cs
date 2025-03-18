@@ -1,12 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mainmenu : MonoBehaviour
 {
     public void StartGame()
     {
-        Debug.Log("Aloitetaan peli"); // small typo fix for aesthetics
-        // Add scene loading logic here if needed
-        // SceneManager.LoadScene("GameScene");
+        Debug.Log("Aloitetaan peli"); 
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()
