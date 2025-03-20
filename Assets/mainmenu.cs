@@ -19,4 +19,8 @@ public class mainmenu : MonoBehaviour
             Application.Quit();
         #endif
     }
+    public void options()
+    {
+        SceneManager.LoadScene("ohjeet");
+    }
 }
