@@ -3387,6 +3387,7 @@ GameObject:
   - component: {fileID: 434423569}
   - component: {fileID: 434423568}
   - component: {fileID: 434423567}
+  - component: {fileID: 434423577}
   m_Layer: 0
   m_Name: vikaboss
   m_TagString: Untagged
@@ -3455,7 +3456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434423565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a02e05eb04c2d8b4db69598d43108ddb, type: 3}
   m_Name: 
@@ -3635,6 +3636,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &434423577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434423565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584c3097077ae284fbbcf1b3939dfa08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  sceneToLoad: WinScreen
 --- !u!1 &441200515
 GameObject:
   m_ObjectHideFlags: 0
