@@ -580,6 +580,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletSpeed: 10
   fireRate: 0.1
+  shootSound: {fileID: 0}
 --- !u!114 &1316869294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +597,7 @@ MonoBehaviour:
   firePoint: {fileID: 1316869284}
   bulletSpeed: 10
   fireRate: 0.25
+  shootSound: {fileID: 0}
 --- !u!50 &1316869295
 Rigidbody2D:
   serializedVersion: 5
@@ -1225,11 +1227,7 @@ GameObject:
   - component: {fileID: 1888114561}
   - component: {fileID: 1888114568}
   - component: {fileID: 1888114567}
-  - component: {fileID: 1888114566}
-  - component: {fileID: 1888114565}
   - component: {fileID: 1888114564}
-  - component: {fileID: 1888114563}
-  - component: {fileID: 1888114562}
   - component: {fileID: 1888114569}
   m_Layer: 0
   m_Name: basicEnemy
@@ -1254,30 +1252,6 @@ Transform:
   - {fileID: 1941569132}
   m_Father: {fileID: 1466444905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
---- !u!114 &1888114562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888114560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35a1aaf7e9d280242aebce996560bcdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1888114563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888114560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44bc93c77657e204583a5199e914f094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1888114564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1324,32 +1298,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1888114565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888114560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02e05eb04c2d8b4db69598d43108ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
---- !u!114 &1888114566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888114560}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02e05eb04c2d8b4db69598d43108ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
 --- !u!114 &1888114567
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,17 +8,27 @@ public class PlayerShooting : MonoBehaviour
     public float bulletSpeed = 30f;
     public float fireRate = 0.1f;     // Time between shots when holding space (in seconds)
 
+    public AudioClip shootSound;      // Sound to play when shooting
+    private AudioSource audioSource;  // Reference to audio source
+
     private bool isShooting = false;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
     void Update()
     {
-        // Start shooting when spacebar is pressed
         if (Input.GetKeyDown(KeyCode.Space) && !isShooting)
         {
             StartCoroutine(ShootContinuously());
         }
 
-        // Stop shooting when spacebar is released
         if (Input.GetKeyUp(KeyCode.Space))
         {
             StopCoroutine(ShootContinuously());
@@ -32,36 +42,34 @@ public class PlayerShooting : MonoBehaviour
 
         while (isShooting)
         {
-            Shoot(); // Fire a bullet
-            yield return new WaitForSeconds(fireRate); // Wait for the specified fire rate
+            Shoot();
+            yield return new WaitForSeconds(fireRate);
         }
     }
 
     void Shoot()
     {
-        // Ensure firePoint is positioned correctly, if it's a child of the player
         Vector3 spawnPosition = firePoint.position;
-
-        // Instantiate the bullet at the fire point with the sprite's current rotation
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, firePoint.rotation);
 
-        // Set the bullet's tag to "Bullet"
         bullet.tag = "Bullet";
 
-        // Get the Bullet script component and assign the shooter (the player)
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
-            bulletScript.shooter = this.gameObject;  // Assign the player as the shooter
+            bulletScript.shooter = this.gameObject;
         }
 
-        // Get the Rigidbody2D component of the bullet
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
         if (rb != null)
         {
-            // Set the bullet's velocity to the direction the sprite is facing (firePoint.up)
             rb.linearVelocity = firePoint.up * bulletSpeed;
+        }
+
+        // Play shoot sound
+        if (shootSound != null)
+        {
+            audioSource.PlayOneShot(shootSound);
         }
     }
 }
