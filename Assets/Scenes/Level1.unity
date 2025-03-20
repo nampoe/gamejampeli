@@ -3476,6 +3476,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!114 &434423572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4763,6 +4764,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!114 &582333903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9021,6 +9023,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!114 &1376833635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10801,6 +10804,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!114 &1652076419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11148,9 +11152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bed03b649a105f48bf4138e0201a482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 10
+  startingHealth: 100
   currentHealth: 100
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!61 &1658933336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12956,6 +12961,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!114 &2026385494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13222,6 +13228,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   damageAmount: 1
+  deathSceneName: DeathScreen
 --- !u!114 &2028101128
 MonoBehaviour:
   m_ObjectHideFlags: 0

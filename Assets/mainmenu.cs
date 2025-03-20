@@ -7,6 +7,7 @@ public class mainmenu : MonoBehaviour
     {
         Debug.Log("Aloitetaan peli"); 
         SceneManager.LoadScene("Level1");
+        KillTracker.playerKillCount = 0;
     }
 
     public void QuitGame()
